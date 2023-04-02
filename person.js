@@ -13,8 +13,8 @@ class Person {
         {
         let tempDate=new Date();
         let dob=this.dob;
-        let age = tempDate.getFullYear()-dob.getFullYear()
-        if(tempDate.getMonth()>dob.getMonth)
+        let age = tempDate.getFullYear()-dob.getFullYear();
+        if(tempDate.getMonth()>dob.getMonth() && (tempDate.getDate()>dob.getDate()))
             return age-1; 
         return age;
         }

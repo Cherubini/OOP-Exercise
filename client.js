@@ -5,7 +5,10 @@ class Client extends Person {
         this.address = address;
     }
     toString() {
-        return `Nome:${super.toString()}\nIndirizzo:${this.address}\nOrdini: ${this.orders.length} \nSpesa totale:${this.totalOrdersPrice()}€\n${this.ordersToString()}\n`
+        let str=`Nome:${super.toString()}\nIndirizzo:${this.address}\nOrdini: ${this.orders.length} \nSpesa totale:${this.totalOrdersPrice()}€\n${this.ordersToString()}\n`
+        if(this.isBirthday())
+            str+='Oggi è il suo compleanno!'
+        return str;
     }
     ordersToString() {
         let str = ''

@@ -1,7 +1,7 @@
 const order1 = new Order('penna', 10, 1);
 const order2 = new Order('matita', 100, 0.5);
 
-const client1 = new Client('Pietro', 'Viglino', 1997, 12, 11, 'Via Balbi 10', [order1, order2]);
+const client1 = new Client('Pietro', 'Viglino', 1997, 4, 2, 'Via Balbi 10', [order1, order2]);
 
 console.log(client1.toString());
 
@@ -32,7 +32,7 @@ const order6 = new Order('penna', 10000, 1);
 
 const order7 = new Order('matita', 100000, 0.5);
 
-const client3 = new Client('Jing', 'Wang', 2011, 4, 2, 'Via Albareto 10', [order6, order7]);
+const client3 = new Client('Jing', 'Wang', 2011, 4, 3, 'Via Albareto 10', [order6, order7]);
 
 const employee2 = new Employee('Davide', 'Consigliere', 1960, 2, 20,  [client3]);
 
@@ -50,6 +50,7 @@ console.log(manager1.toString());
 console.log(client1.isBirthday());
 console.log(' ');
 console.log(client3.isBirthday());
+
 
 // let order1 = new Order('cocco', 12, 2)
 // //console.log(order1.toString())
