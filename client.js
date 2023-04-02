@@ -1,11 +1,11 @@
 class Client extends Person {
-    constructor(name, surname, orders, address) {
-        super(name, surname);
+    constructor(name, surname, year, month, day, address, orders) {
+        super(name, surname, year, month, day);
         this.orders = orders;
         this.address = address;
     }
     toString() {
-        return `CLIENT:${super.toString()}\nORDERS:\n${this.ordersToString()}\nTOTAL PAYMENT:${this.totalOrdersPrice()}€\nADDRESS:${this.address}`
+        return `Nome:${super.toString()}\nIndirizzo:${this.address}\nOrdini: ${this.orders.length} \nSpesa totale:${this.totalOrdersPrice()}€\n${this.ordersToString()}\n`
     }
     ordersToString() {
         let str = ''
@@ -16,7 +16,7 @@ class Client extends Person {
     }
 
     totalOrdersPrice() {
-        let totalOrdersPrice = 0
+        let totalOrdersPrice = 0;
         for (let i=0; i<this.orders.length; i++) {
             totalOrdersPrice+=this.orders[i].totalPrice();
         }
