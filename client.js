@@ -1,5 +1,5 @@
 class Client extends Person {
-    constructor(name, surname, year, month, day, address, orders) {
+    constructor(name, surname, year, month, day, address, orders = []) {
         super(name, surname, year, month, day);
         this.orders = orders;
         this.address = address;
@@ -19,11 +19,17 @@ class Client extends Person {
     }
 
     totalOrdersPrice() {
-        let totalOrdersPrice = 0;
-        for (let i=0; i<this.orders.length; i++) {
-            totalOrdersPrice+=this.orders[i].totalPrice();
-        }
-        return totalOrdersPrice;
+        // let totalOrdersPrice = 0;
+        // for (let i=0; i<this.orders.length; i++) {
+        //     totalOrdersPrice+=this.orders[i].totalPrice();
+        // }
+        // return totalOrdersPrice;
+        
+        let totalPrice=this.orders.reduce((previousElement,currentElement)=> {
+            previousElement+=currentElement.totalPrice();
+            return previousElement;
+        }, 0)
+        return totalPrice;
     }
 
     addOrder(order){

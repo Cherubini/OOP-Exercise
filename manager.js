@@ -10,7 +10,7 @@ class Manager extends Person{
         return `Nome: ${super.toString()}
 Impiegati: ${this.employees.length}
 Clienti: ${this.totalClients()}
-Guadagni totali: ${this.totalEarnings()}€`;
+Guadagni totali: ${this.totalEarnings().toFixed(2)}€`;
         }
 
     totalClients()

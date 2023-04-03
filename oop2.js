@@ -99,3 +99,7 @@ console.log(client3.isBirthday());
 
 
 // console.log(client1.toString());
+
+const numbers = [3, 4, 5, 9];
+
+console.log(Utility.filter(numbers,(n)=>n>4));

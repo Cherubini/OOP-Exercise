@@ -4,7 +4,7 @@ class Person {
         this.surname = surname;
         this.dob=new Date(year, month-1, day);
     }
-    
+     
     toString(){
         return `${this.name} ${this.surname}`
     }
